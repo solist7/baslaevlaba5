@@ -1,14 +1,19 @@
-n = int(input()) 
-listic = 
-negative = [x for x in listic if x < 0 ]
-mini_abs = min(abs(negative))
-
-positive = [x for x in listic if x >=0]
-mini_pos = min(positive)
-
-if mini_abs != None and mini_pos != None:
-    res = mini_abs*mini_pos
-    print(res)
-
-
-
+n = int(input())
+numbers = []
+for i in range(n):
+    num = int(input())
+    numbers = numbers + [num]
+positive = []
+negative = []
+for num in numbers:
+    if num > 0:
+        positive = positive + [num]
+    elif num < 0:
+        negatives = negatives + [num]
+if len(positive) > 0 and len(negatives) > 0:
+    min_positive = min(positives)
+    min_abs_negative = max(negative)
+    result = min_positive * min_abs_negative
+    print(result)
+else:
+    print('Введите другие элементы')
